@@ -1,0 +1,28 @@
+body {
+	background: #333;
+	overflow: auto;
+	font-size: large;
+}
+
+h2 span, section h3	{display: none;}
+section {
+	height: 800px;
+	overflow-y: auto;
+}
+footer, input		{font-size: large;}
+header {
+	margin-top:50px;
+	height:112px;
+}
+
+.desktopSoilik {
+	max-height:1px;
+}
+
+footer img {
+	  width:48px;
+}
+
+footer {
+	height:56px;
+}

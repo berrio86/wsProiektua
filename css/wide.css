@@ -1,0 +1,46 @@
+body				{background: #999;}
+
+/*#page-wrap:after 	{content: "Wide Layout";}*/
+
+header {
+	position:absolute;
+	height:14%;
+	width:100%;
+}
+
+nav	{
+	position:absolute;
+	top:14%;
+	left:0px;
+	width: 16%; 
+	height: 78%;
+	z-index: 10;
+} 
+nav span				{margin: 0px 20px 0px 0px;}
+section	{
+	position: absolute;
+	right:0px;
+	top:14%;
+	width: 84%; 
+	height: 78%;
+	z-index: 1;
+}
+footer {
+	clear: both; 
+	display: block;
+	position: absolute;
+	width:100%;
+	height:8%;
+	bottom: 0px;
+}
+
+footer img {
+	height:80%;
+}
+
+.try-again {
+  color:#f2f2f2;
+  text-decoration:underline;
+  cursor:pointer;
+	text-align:center;
+}
