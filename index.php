@@ -8,9 +8,9 @@
     <section class="main" id="s1">
 		
 	
-	<div>
+
 	Argazki bildumako lehen orria
-	</div>
+
 
 		
     </section>

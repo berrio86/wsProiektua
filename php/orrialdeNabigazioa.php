@@ -1,7 +1,7 @@
 <?php
 
 	//ikus ea sesio bat hasi den eta ez bada hala guest ezarri
-	if((isset($_SESSION['eposta']) && !empty($_SESSION['eposta']))  && (isset($_SESSION['mota']) && !empty($_SESSION['mota']))) {
+	if((isset($_SESSION['eposta']) && !empty($_SESSION['eposta'])) &&  (isset($_SESSION['mota']) && !empty($_SESSION['mota']))) {
    		null;
 	} else {
 		$_SESSION['eposta'] = "Erabiltzaile Anonimoa";
@@ -72,7 +72,7 @@
       	<a href="SignIn.php"><img class="botoia" title="Saioa hasi" src="irudiak/login-icon.png"></a>';
 	} else {
 		echo '<a href="LogOut.php"><img title="Saioa amaitu" class="botoia"  src="irudiak/logout-icon.png"></a>
-		<a href="#" class="tooltip"><span><strong>Erabiltzailearen datuak</strong><br/>emaila: '.$_SESSION['eposta'].'<br/>erabiltzaile mota: '.$_SESSION['mota'].'<br/>konexio data: '.$_SESSION['konexioData'].'</span><img class="botoia2" src="'.$_SESSION['erabiltzaileIrudia'].'"></a>'; 
+		<a href="#" class="tooltip"><span><strong>Erabiltzailearen datuak</strong><br/>emaila: '.$_SESSION['eposta'].'<br/>erabiltzaile mota: '.$_SESSION['mota'].'<br/></span><img class="botoia2" src="'.$_SESSION['erabiltzaileIrudia'].'"></a>'; 
 		//erabiltzailearen ikonoa hartzen du
 	}
     ?>
@@ -96,15 +96,22 @@
 		echo ('<a href="index.php"><span>Hasiera</span></a>');
 	
 	
-	if($_SESSION['mota'] == "IRAKASLEA") {
-		if($_GET['orrialdea']=="reviewingQuizes") //galderak kudeatu
-		echo ('<a href="reviewingQuizes.php"><span id="act-sel" class="act-sel">Galderak kudeatu<div class="arrow-right"></div></span></a>');
-	else
-		echo ('<a href="reviewingQuizes.php"><span>Galderak kudeatu</span></a>');
+	
+	if($_SESSION['mota'] == "Administratzailea") {
+		if($_GET['orrialdea']=="eskaerakKudeatu") //Eskariak ikusi
+			echo'<a href="eskaerakKudeatu.php"><span id="act-sel" class="act-sel">Eskaerak ikusi<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="eskaerakKudeatu.php"><span>Eskaerak ikusi</span></a>';
 	}
 	
+	if($_SESSION['mota'] != "GUEST") {
+		if($_GET['orrialdea']=="showUsers") //Erabiltzaileak ikusi
+			echo'<a href="ShowUsersWithImage.php"><span id="act-sel" class="act-sel">Erabiltzaileak ikusi<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="ShowUsersWithImage.php"><span>Erabiltzaileak ikusi</span></a>';
+	}
 	
-	if($_GET['orrialdea']=="kredituak") //kredituak
+	if($_GET['orrialdea']=="credits") //kredituak
 		echo('<a href="credits.php"><span id="act-sel" class="act-sel">Kredituak<div class="arrow-right"></div></span></a>');
 	else
 		echo('<a href="credits.php"><span>Kredituak</span></a>');

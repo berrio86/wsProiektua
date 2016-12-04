@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2016 at 12:23 
+-- Generation Time: Dec 04, 2016 at 09:26 
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -43,17 +43,40 @@ CREATE TABLE `Erabiltzailea` (
   `Izena` varchar(30) NOT NULL,
   `Pasahitza` varchar(30) NOT NULL,
   `Mota` varchar(30) NOT NULL,
-  `Kontagailua` int(1) NOT NULL
+  `Kontagailua` int(1) NOT NULL,
+  `Argazkia` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `Erabiltzailea`
 --
 
-INSERT INTO `Erabiltzailea` (`Email`, `Izena`, `Pasahitza`, `Mota`, `Kontagailua`) VALUES
-('iberriochoa001@ikasle.ehu.eus', 'Inaki Berriotxoa Gabiria', '123456', 'Bazkidea', 0),
-('jarzelus001@ikasle.ehu.eus', 'Jon Arzelus', '123456', 'Bazkidea', 0),
-('webmaster@kamera.com', 'Web Master', '123456', 'Administratzailea', 0);
+INSERT INTO `Erabiltzailea` (`Email`, `Izena`, `Pasahitza`, `Mota`, `Kontagailua`, `Argazkia`) VALUES
+('iberriochoa001@ikasle.ehu.eus', 'Inaki Berriotxoa Gabiria', '123456', 'Bazkidea', 0, ''),
+('jarzelus001@ikasle.ehu.eus', 'Jon Arzelus', '123456', 'Bazkidea', 0, ''),
+('webmaster@kamera.com', 'Web Master', '123456', 'Administratzailea', 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ErabiltzaileBerria`
+--
+
+CREATE TABLE `ErabiltzaileBerria` (
+  `Izena` varchar(50) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `Pasahitza` varchar(50) NOT NULL,
+  `Mota` varchar(30) NOT NULL,
+  `kontagailua` int(1) NOT NULL,
+  `Argazkia` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ErabiltzaileBerria`
+--
+
+INSERT INTO `ErabiltzaileBerria` (`Izena`, `Email`, `Pasahitza`, `Mota`, `kontagailua`, `Argazkia`) VALUES
+('Urtzi Otamendi', 'uotamendi002@ikasle.ehu.eus', '123456', 'Bazkidea', 0, 'erabiltzaileIrudiak/uotamendi002ikasleehueus');
 
 --
 -- Indexes for dumped tables
