@@ -1,8 +1,0 @@
-Web Sistemak ikasgaiko proiektua
-
-2016/11/24
-Jon Arzelus -> 1:30 -> Symfony gida irakurri eta instalatzen hasi
-2016/11/24
-Iñaki Berriotxoa -> 1:30 -> Symfony gida irakurri eta instalatzen hasi
-2016/11/28
-Jon Arzelus eta Iñaki Berriotxoa -> 1:30 -> Symfony instalatu eta git errepositorioa abiarazi

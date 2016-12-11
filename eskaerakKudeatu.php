@@ -1,11 +1,9 @@
 <?php
 	$_GET['orrialdea'] = "eskaerakKudeatu";
-	include 'php/orrialdeGoia.php';
-	echo('</head>');
-?>
+	include 'php/orrialdeGoia.php';?>
 <script type="text/javascript" language="javascript">
 
-	xhttp = new XMLHttpRequest();
+	//xhttp = new XMLHttpRequest();
 	
 	function ezabatu(x){
 		alert("Ezabatu!!");
@@ -31,6 +29,7 @@
 
 </script>
 <?php
+	echo('</head>');
 	echo('<body>');
 	include 'php/orrialdeNabigazioa.php';
 ?>

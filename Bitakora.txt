@@ -1,0 +1,12 @@
+BITAKORA
+
+2016/11/24 	->Jon 	 	-> 1:30 	-> Symfony gida irakurri eta instalatzen hasi
+2016/11/24	->Iñaki		-> 1:30 	-> Symfony gida irakurri eta instalatzen hasi
+2016/11/28	->Jon		-> 1:30 	-> Symfony instalatu eta git errepositorioa abiarazi
+2016/11/28	->Iñaki		-> 1:30 	-> Symfony instalatu eta git errepositorioa abiarazi
+2016/12/01	->Iñaki 	-> 1:30  	-> Symfony tutorialak ikusten jarraitu eta lehen pausuak eman 
+2016/12/02	->Iñaki 	-> 2 ordu 	-> Koldarren moduan atzera bota eta php argazki bilduma egiten hasi
+						-> Repositoria ezarri eta github kontua lotu
+						-> Lokalean proiektua hasieratu
+						-> Aurreko proiektutik aprobetxatu ahal zena
+						-> Datu basea diseinatu, inplementatu eta datu batzuk sartu
