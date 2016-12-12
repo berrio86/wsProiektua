@@ -10,3 +10,6 @@ BITAKORA
 						-> Lokalean proiektua hasieratu
 						-> Aurreko proiektutik aprobetxatu ahal zena
 						-> Datu basea diseinatu, inplementatu eta datu batzuk sartu
+2016/12/12	->Iñaki		-> 1:30		-> Datu basea bildumatara egokitu
+						-> Erabiltzaileak bildumak sortzeko aukera eman
+

@@ -102,7 +102,14 @@
 			echo'<a href="eskaerakKudeatu.php"><span id="act-sel" class="act-sel">Eskaerak ikusi<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="eskaerakKudeatu.php"><span>Eskaerak ikusi</span></a>';
+		
+		if($_GET['orrialdea']=="bildumaAukeratu") //Bildumak ikusi aurrerago aukeratu eta argazkiak ezabatu ahal izateko
+			echo'<a href="bildumaAukeratu.php"><span id="act-sel" class="act-sel">Bildumak ikusi<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="bildumaAukeratu.php"><span>Bildumak ikusi</span></a>';
 	}
+	
+	
 	
 	if($_SESSION['mota'] != "GUEST") {
 		if($_GET['orrialdea']=="showUsers") //Erabiltzaileak ikusi

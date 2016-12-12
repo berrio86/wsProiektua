@@ -5,29 +5,44 @@
 		<body>');
 	include 'php/orrialdeNabigazioa.php';
 ?>
-
+<section class="main" id="s1">
+	<br/><h1>DBko erabiltzaileak kudeatzeko administratzailea</h1>
+<div id="taula">
 <?php 
-echo'<section class="main" id="s1">';
+
 		
 include 'dbkonexioak/dbOpen.php';
 
 
 $erabiltzaileak = "SELECT * FROM Erabiltzailea";
 $emaitza = $db->query($erabiltzaileak); 
-echo '<table border=2><tr><th> IZEN-ABIZENAK </th><th> POSTA </th><th> IRUDIA </th>';
+	
+echo ('<table>
+					<tr>
+						<th style="text-align:center"> Izena </th>
+						<th style="text-align:center"> Emaila </th>
+						<th style="text-align:center"> Argazkia </th>
+						<th style="text-align:center"> Ezabatu </th>
+						
+					</tr> ');
 
 while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){
-	echo '<tr><td>'.$lerroa['Izena'].'</td><td>'.$lerroa['Email'].'</td><td style="text-align: center;">'.'<img alt="Erabiltzaile honek ez du argazkirik." src="'.$lerroa['Argazkia'].'" width="80" height="80">'.'</td></tr>';
+	echo '<tr>';
+	echo '<td>'.$lerroa['Izena'].'</td>';
+	echo '<td>'.$lerroa['Email'].'</td>';
+	echo '<td style="text-align: center;">'.'<img alt="Erabiltzaile honek ez du argazkirik." src="'.$lerroa['Argazkia'].'" width="80" height="80">'.'</td>';
+	if($_SESSION['mota']=="Administratzailea"){
+		echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(".$lerroa['Email'].")'></td>");
+	}
+	echo '</tr>';
 }
 echo '</table>';
 
-/*if($_GET['orrialdea']!="erabiltzaileakIkusi") {
-	echo "</br></br> Hasierara bueltatu nahi baduzu, klikatu hurrengo estekan: <a href='".HASIERA."'> Hasiera </a></br></br>";
-}*/
-
-echo'</section>';
 include 'dbkonexioak/dbClose.php';
 
 ?>
+	
+</div>
+</section>
 
 <?php include 'php/orrialdeOina.php'; ?>
