@@ -11,9 +11,15 @@
 <?php 
 
 include 'dbkonexioak/dbOpen.php';
+$eposta=$_SESSION['eposta'];
+$mota=$_SESSION['mota'];
 
+if($mota=="Administratzailea"){
+	$erabiltzaileak = "SELECT * FROM Bilduma";
+}else{
+	$erabiltzaileak = "SELECT * FROM Bilduma WHERE Jabea='$eposta'";
+}
 
-$erabiltzaileak = "SELECT * FROM Bilduma";
 $emaitza = $db->query($erabiltzaileak); 
 
 echo ('<table>

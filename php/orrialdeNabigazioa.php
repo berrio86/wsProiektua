@@ -109,7 +109,17 @@
 			echo'<a href="bildumaAukeratu.php"><span>Bildumak ikusi</span></a>';
 	}
 	
-	
+	if($_SESSION['mota'] == "Bazkidea") {
+		if($_GET['orrialdea']=="albumaSortu") //Eskariak ikusi
+			echo'<a href="albumaSortu.php"><span id="act-sel" class="act-sel">Albuma sortu<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="albumaSortu.php"><span>Albuma sortu</span></a>';
+		
+		if($_GET['orrialdea']=="bildumaAukeratu") //Bildumak ikusi aurrerago aukeratu eta argazkiak ezabatu ahal izateko
+			echo'<a href="bildumaAukeratu.php"><span id="act-sel" class="act-sel">Bildumak ikusi<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="bildumaAukeratu.php"><span>Bildumak ikusi</span></a>';
+	}
 	
 	if($_SESSION['mota'] != "GUEST") {
 		if($_GET['orrialdea']=="showUsers") //Erabiltzaileak ikusi
