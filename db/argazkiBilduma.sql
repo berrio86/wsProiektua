@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2016 at 09:16 
+-- Generation Time: Dec 15, 2016 at 12:06 
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -30,8 +30,16 @@ CREATE TABLE `Argazkia` (
   `Helbidea` varchar(200) NOT NULL,
   `AtzipenMota` varchar(30) NOT NULL,
   `Jabea` varchar(30) NOT NULL,
-  `BildumaIzena` varchar(50) NOT NULL
+  `BildumaIzena` varchar(50) NOT NULL,
+  `ArgazkiIzena` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Argazkia`
+--
+
+INSERT INTO `Argazkia` (`Helbidea`, `AtzipenMota`, `Jabea`, `BildumaIzena`, `ArgazkiIzena`) VALUES
+('bildumak/iberriochoa001@ikasle.ehu.eus/GuttenMorgen/superman.png', 'Publikoa', 'iberriochoa001@ikasle.ehu.eus', 'GuttenMorgen', 'superman.png');
 
 -- --------------------------------------------------------
 
@@ -43,6 +51,15 @@ CREATE TABLE `Bilduma` (
   `Izena` varchar(50) NOT NULL,
   `Jabea` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Bilduma`
+--
+
+INSERT INTO `Bilduma` (`Izena`, `Jabea`) VALUES
+('GuttenMorgen', 'iberriochoa001@ikasle.ehu.eus'),
+('Hello', 'iberriochoa001@ikasle.ehu.eus'),
+('Kaixo', 'iberriochoa001@ikasle.ehu.eus');
 
 -- --------------------------------------------------------
 

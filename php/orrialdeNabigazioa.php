@@ -119,6 +119,11 @@
 			echo'<a href="bildumaAukeratu.php"><span id="act-sel" class="act-sel">Bildumak ikusi<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="bildumaAukeratu.php"><span>Bildumak ikusi</span></a>';
+		
+		if($_GET['orrialdea']=="argazkiakIgo") //Argazkiak albumei esleitzeko aukera
+			echo'<a href="argazkiakIgo.php"><span id="act-sel" class="act-sel">Argazkiak igo<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="argazkiakIgo.php"><span>Argazkiak igo</span></a>';
 	}
 	
 	if($_SESSION['mota'] != "GUEST") {
