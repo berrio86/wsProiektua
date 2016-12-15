@@ -14,5 +14,6 @@ BITAKORA
 						-> Erabiltzaileak bildumak sortzeko aukera eman
 2016/12/15	->Jon		-> 1:30 	-> EskaerakKudeatu AJAX aurrerapena
 2016/12/15 	->Iñaki		-> 2:30		-> Argazki bilmuden sorrera, argazkiak ikusteko lehioak garatu
+2016/12/15	->Iñaki		-> 1:30		-> Argazkien ikuskaketa burututa, bilduma aukeraketa hobetzen
 
 
