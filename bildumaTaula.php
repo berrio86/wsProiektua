@@ -41,3 +41,4 @@ while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){
 echo '</table>';
 include 'dbkonexioak/dbClose.php';
 ?>
+

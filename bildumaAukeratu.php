@@ -1,6 +1,10 @@
 <?php
 	$_GET['orrialdea'] = "bildumaAukeratu";
 	include 'php/orrialdeGoia.php';
+?>
+
+
+<?php
 	echo('</head>
 		<body>');
 	include 'php/orrialdeNabigazioa.php';
