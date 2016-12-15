@@ -1,6 +1,0 @@
-BITAKORA
-
-Abenduak 2	->Iñaki Berriotxoa 	-> 2 ordu 	-> Repositoria ezarri eta github kontua lotu
-							-> Lokalean proiektua hasieratu
-							-> Aurreko proiektutik aprobetxatu ahal zena
-							-> Datu basea diseinatu, inplementatu eta datu batzuk sartu

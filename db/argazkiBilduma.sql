@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 04, 2016 at 09:26 
+-- Generation Time: Dec 15, 2016 at 09:16 
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -29,6 +29,18 @@ SET time_zone = "+00:00";
 CREATE TABLE `Argazkia` (
   `Helbidea` varchar(200) NOT NULL,
   `AtzipenMota` varchar(30) NOT NULL,
+  `Jabea` varchar(30) NOT NULL,
+  `BildumaIzena` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Bilduma`
+--
+
+CREATE TABLE `Bilduma` (
+  `Izena` varchar(50) NOT NULL,
   `Jabea` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -54,7 +66,7 @@ CREATE TABLE `Erabiltzailea` (
 INSERT INTO `Erabiltzailea` (`Email`, `Izena`, `Pasahitza`, `Mota`, `Kontagailua`, `Argazkia`) VALUES
 ('iberriochoa001@ikasle.ehu.eus', 'Inaki Berriotxoa Gabiria', '123456', 'Bazkidea', 0, ''),
 ('jarzelus001@ikasle.ehu.eus', 'Jon Arzelus', '123456', 'Bazkidea', 0, ''),
-('webmaster@kamera.com', 'Web Master', '123456', 'Administratzailea', 0, '');
+('webmaster@argazkiBilduma.com', 'Web Master', '123456', 'Administratzailea', 0, '');
 
 -- --------------------------------------------------------
 
@@ -87,6 +99,12 @@ INSERT INTO `ErabiltzaileBerria` (`Izena`, `Email`, `Pasahitza`, `Mota`, `kontag
 --
 ALTER TABLE `Argazkia`
   ADD PRIMARY KEY (`Helbidea`);
+
+--
+-- Indexes for table `Bilduma`
+--
+ALTER TABLE `Bilduma`
+  ADD PRIMARY KEY (`Izena`,`Jabea`);
 
 --
 -- Indexes for table `Erabiltzailea`
