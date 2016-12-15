@@ -22,7 +22,7 @@ if(isset($_POST['bildumaIzena'])){
 		$esp_izena= filter_var($bildumaIzena, FILTER_VALIDATE_REGEXP, array("options"=>array("regexp"=>"/([A-Z]{1}[a-z ]{1,})*/")));
 		if(!$esp_izena==false){
 			//regexp-a betetzen bada, aurrera
-			$bilduma_helbidea = "bildumak/".$bildumaIzena; //erabiltzaile argazkiei izen berri bat ezarri beren emailaren arabera
+			$bilduma_helbidea = "bildumak/".$eposta."/".$bildumaIzena; //erabiltzaile argazkiei izen berri bat ezarri beren emailaren arabera
 			if(mkdir($bilduma_helbidea,0777, true)){
 				echo 'Bilduma egoki gorde da, Bildumak ikusi atalean kudeatu ahal izango duzu.</br>';
 				$txertaketa = "INSERT INTO Bilduma VALUES('$bildumaIzena','$eposta')";
