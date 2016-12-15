@@ -12,4 +12,5 @@ BITAKORA
 						-> Datu basea diseinatu, inplementatu eta datu batzuk sartu
 2016/12/12	->Iñaki		-> 1:30		-> Datu basea bildumatara egokitu
 						-> Erabiltzaileak bildumak sortzeko aukera eman
+2016/12/15 ->Jon		-> 1:30 eskaerakKudeatu AJAX aurrerapena
 
