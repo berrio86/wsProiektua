@@ -21,7 +21,7 @@
 	}
 	
 	function aukeratu(y){
-		window.open("argazkiakKudeatu.php");
+		window.open("argazkiakIkusi.php");
 	}
 
 </script>

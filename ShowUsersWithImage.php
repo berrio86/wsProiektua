@@ -21,10 +21,11 @@ echo ('<table>
 					<tr>
 						<th style="text-align:center"> Izena </th>
 						<th style="text-align:center"> Emaila </th>
-						<th style="text-align:center"> Argazkia </th>
-						<th style="text-align:center"> Ezabatu </th>
-						
-					</tr> ');
+						<th style="text-align:center"> Argazkia </th>');
+if($_SESSION['mota'] == "Administratzailea") {
+			echo('<th style="text-align:center"> Ezabatu </th>');
+}
+echo ('</tr>');
 
 while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){
 	echo '<tr>';

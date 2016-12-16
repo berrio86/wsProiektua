@@ -103,10 +103,15 @@
 		else
 			echo'<a href="eskaerakKudeatu.php"><span>Eskaerak ikusi</span></a>';
 		
-		if($_GET['orrialdea']=="bildumaAukeratu") //Bildumak ikusi aurrerago aukeratu eta argazkiak ezabatu ahal izateko
+		if($_GET['orrialdea']=="bildumaAukeratu") //Bildumak ikusi
 			echo'<a href="bildumaAukeratu.php"><span id="act-sel" class="act-sel">Bildumak ikusi<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="bildumaAukeratu.php"><span>Bildumak ikusi</span></a>';
+		
+		if($_GET['orrialdea']=="argazkiakKudeatu") //Bildumak ikusi aurrerago aukeratu eta argazkiak ezabatu ahal izateko
+			echo'<a href="argazkiakKudeatu.php"><span id="act-sel" class="act-sel">Argazkiak kudeatu<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="argazkiakKudeatu.php"><span>Argazkiak kudeatu</span></a>';
 	}
 	
 	if($_SESSION['mota'] == "Bazkidea") {
@@ -124,6 +129,11 @@
 			echo'<a href="argazkiakIgo.php"><span id="act-sel" class="act-sel">Argazkiak igo<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="argazkiakIgo.php"><span>Argazkiak igo</span></a>';
+		
+		if($_GET['orrialdea']=="argazkiakKudeatu") //Argazkiak kudeatzeko aukera
+			echo'<a href="argazkiakKudeatu.php"><span id="act-sel" class="act-sel">Argazkiak kudeatu<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="argazkiakKudeatu.php"><span>Argazkiak kudeatu</span></a>';
 	}
 	
 	if($_SESSION['mota'] != "GUEST") {
