@@ -2,7 +2,7 @@
 if(session_status() == PHP_SESSION_NONE){
 	session_start();
 }
-include 'dbkonexioak/dbOpen.php';
+include 'dbkonexioak/dbOpen.php'; 
 $eposta=$_SESSION['eposta'];
 $mota=$_SESSION['mota'];
 
