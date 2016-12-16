@@ -20,7 +20,7 @@
 		}
 	}
 	
-	function onartu(y){
+	function onartu(mail, izena, pasa, mota, arg){
 		//alert("Onartu!!");
 		if(confirm("Ziur al zaude erabiltzaile honen eskaria onartu nahi duzula?")){
 			xhttp.onreadystatechange = function(){
@@ -28,7 +28,7 @@
 					document.getElementById("taula").innerHTML=this.responseText;
 				}	
 			};
-		xhttp.open("GET","eskaeraTaula.php?onartuerabil="+y, true);
+		xhttp.open("GET","eskaeraTaula.php?onartuerabil="+mail+"&pasa="+pasa+"&izena="+izena+"&mota="+mota+"&arg="+arg, true);
 		xhttp.send();
 		}else{
 			alert("Erabiltzailearen eskaera ez da onartua izango.");
