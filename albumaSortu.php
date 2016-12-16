@@ -10,7 +10,7 @@
 <div id="taula">
 	<form id="erregistro" name="erregistro" method="POST" action="albumaGorde.php" enctype="multipart/form-data">
   			(*) Albumaren izena:
-  			<input type="text" name="bildumaIzena" required pattern="([A-Z]{1}[a-z ]{1,})*" title="Izen-abizenak letra larriz hasita" oninvalid="this.setCustomValidity('Atal hau ezin da hutsik utzi')"><br>
+  			<input type="text" name="bildumaIzena" placeholder="Izena" required pattern="([A-Z]{1}[a-z ]{1,})*" title="Izen-abizenak letra larriz hasita" oninvalid="this.setCustomValidity('Atal hau ezin da hutsik utzi')"><br>
 			
 			<input id="botoia" type="submit" name="button" value="Sortu">
 			
