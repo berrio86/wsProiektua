@@ -112,6 +112,11 @@
 			echo'<a href="argazkiakKudeatu.php"><span id="act-sel" class="act-sel">Argazkiak kudeatu<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="argazkiakKudeatu.php"><span>Argazkiak kudeatu</span></a>';
+		
+		if($_GET['orrialdea']=="etiketakKudeatu") //Argazkiak kudeatzeko aukera
+			echo'<a href="etiketakKudeatu.php"><span id="act-sel" class="act-sel">Etiketak kudeatu<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="etiketakKudeatu.php"><span>Etiketak kudeatu</span></a>';
 	}
 	
 	if($_SESSION['mota'] == "Bazkidea") {
@@ -134,6 +139,11 @@
 			echo'<a href="argazkiakKudeatu.php"><span id="act-sel" class="act-sel">Argazkiak kudeatu<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="argazkiakKudeatu.php"><span>Argazkiak kudeatu</span></a>';
+		
+		if($_GET['orrialdea']=="etiketakKudeatu") //Argazkiak kudeatzeko aukera
+			echo'<a href="etiketakKudeatu.php"><span id="act-sel" class="act-sel">Etiketak kudeatu<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="etiketakKudeatu.php"><span>Etiketak kudeatu</span></a>';
 	}
 	
 	if($_SESSION['mota'] != "GUEST") {
