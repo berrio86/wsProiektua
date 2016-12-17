@@ -16,8 +16,9 @@ BITAKORA
 2016/12/15 	->Iñaki		-> 2:30		-> Argazki bilmuden sorrera, argazkiak ikusteko lehioak garatu
 2016/12/15	->Iñaki		-> 1:30		-> Argazkien ikuskaketa burututa, bilduma aukeraketa hobetzen
 2016/12/15	->Iñaki		-> 1:30		-> Argazkiak ikusten dira, bilduma aukeraketa burututa, bilduma 
-									-> ezabaketa burututa, argazkiak banaka ezabatzea falta da
+						-> ezabaketa burututa, argazkiak banaka ezabatzea falta da
 2016/12/16 	->Jon		-> 1:30		-> erabiltzaileen onarketa osatua
 2016/12/16	->Iñaki		-> 1:30		-> argazkiak ezabatzea osatua eta etiketen kudeaketa hasieratua
-
-
+2016/12/16	->Iñaki		-> 2:30		-> etiketak kudeatzeko sistema garatzen jarraitu
+2016/12/16	->Iñaki		-> 1:00		-> albumaren funtzionailtatea erakusteko bi bilduma polit sortu
+						-> ezabatketa eta etiketatu frogak egiteko beste bi bilduma sortu pantailazoekin  
