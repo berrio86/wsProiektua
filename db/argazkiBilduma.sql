@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-12-2016 a las 00:08:13
+-- Tiempo de generación: 21-12-2016 a las 00:20:16
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -40,7 +40,7 @@ CREATE TABLE `argazkia` (
 
 INSERT INTO `argazkia` (`Helbidea`, `Jabea`, `BildumaIzena`, `ArgazkiIzena`, `Etiketak`) VALUES
 ('bildumak/iberriochoa001@ikasle.ehu.eus/EzabatzekoBil/SI2.png', 'iberriochoa001@ikasle.ehu.eus', 'EzabatzekoBil', 'SI2.png', ''),
-('bildumak/iberriochoa001@ikasle.ehu.eus/EzabatzekoBil/superman.png', 'iberriochoa001@ikasle.ehu.eus', 'EzabatzekoBil', 'superman.png', ''),
+('bildumak/iberriochoa001@ikasle.ehu.eus/EzabatzekoBil/superman.png', 'iberriochoa001@ikasle.ehu.eus', 'EzabatzekoBil', 'superman.png', 0x613a333a7b693a303b733a353a227375706572223b693a313b733a333a226d616e223b693a323b733a363a22677561706f61223b7d),
 ('bildumak/iberriochoa001@ikasle.ehu.eus/EzabatzekoBilduma/Screenshot from 2016-12-17 12-10-46.png', 'iberriochoa001@ikasle.ehu.eus', 'EzabatzekoBilduma', 'Screenshot from 2016-12-17 12-', ''),
 ('bildumak/iberriochoa001@ikasle.ehu.eus/EzabatzekoBilduma/Screenshot from 2016-12-17 12-10-52.png', 'iberriochoa001@ikasle.ehu.eus', 'EzabatzekoBilduma', 'Screenshot from 2016-12-17 12-', ''),
 ('bildumak/iberriochoa001@ikasle.ehu.eus/FrogaBilduma/autoa.jpg', 'iberriochoa001@ikasle.ehu.eus', 'FrogaBilduma', 'autoa.jpg', ''),

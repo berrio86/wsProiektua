@@ -52,6 +52,7 @@ if($mota=="GUEST") {
 	$erabiltzaileak = "SELECT * FROM Bilduma WHERE atzipenMota='$atzipena' OR atzipenMota='$atzipena1' OR Jabea='$eposta'";
 }
 $emaitza = $db->query($erabiltzaileak); 
+print_r($emaitza);
 echo ('<table>
 					<tr>
 						<th style="text-align:center"> Jabe Posta </th>

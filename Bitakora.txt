@@ -27,4 +27,4 @@ BITAKORA
 						-> datu basean aldaketak hurrengo lanak hasteko
 						-> argazkien atzipen mota inplementatuta, albumeko
 						-> etiketak kudeatzen hasita
-						-> 23:15
+						-> 1:05		-> etiketen kudeaketa amaituta (etiketak sortu/ikusi/editatu)
