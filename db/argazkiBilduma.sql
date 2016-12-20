@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-12-2016 a las 17:22:28
+-- Tiempo de generación: 20-12-2016 a las 17:24:34
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -72,7 +72,7 @@ INSERT INTO `argazkia` (`Helbidea`, `Jabea`, `BildumaIzena`, `ArgazkiIzena`, `Et
 CREATE TABLE `bilduma` (
   `Izena` varchar(50) NOT NULL,
   `Jabea` varchar(30) NOT NULL,
-  `atzipenMota` set('publikoa','atzipenMugatua','pribatua') NOT NULL DEFAULT 'publikoa'
+  `atzipenMota` set('publikoa','atzipenMugatua','pribatua') NOT NULL DEFAULT 'pribatua'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

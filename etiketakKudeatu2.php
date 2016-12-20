@@ -17,6 +17,7 @@ if(isset($_GET['bildumaAukeratua'])){
 		
 		echo "<p> Aukeratu argazkia:</p><br/>";
 		echo '<select name="argazkiak" id="argazkiak" onchange="kargatuDatuak(this.value)">';
+		echo "<option disabled selected value> -- aukeratu argazkia -- </option>";
 		while ($lerroa = $emaitza->fetch_assoc()){
 			$helbidea=$lerroa['Helbidea'];
 			//echo $lerroa['ArgazkiIzena'];
@@ -31,7 +32,7 @@ if(isset($_GET['bildumaAukeratua'])){
 }
 
 //bilduma eta eragiketak aukeratuta, argazkia kargatzen
-if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && !isset($_GET['helbidea'])){
+/*if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && !isset($_GET['helbidea'])){
 	$jabea=$_SESSION['eposta'];
 	$bilduma=$_GET['bilduma'];
 	$argazkia=$_GET['argazkia'];
@@ -46,10 +47,10 @@ if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && !isset($_GET['helbidea
 		echo "Errorea datu basearekin, jarri harremanetan administratzailearekin";
 	}
 	include "dbkonexioak/dbClose.php";
-}
+}*/
 
 //bilduma eta eragiketak aukeratuta, argazkia kargatuta, etiketak kargatzen
-if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && isset($_GET['helbidea'])){
+/*if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && isset($_GET['helbidea'])){
 	$helbidea=$_GET['helbidea'];
 	$bilduma=$_GET['bilduma'];
 	$argazkia=$_GET['argazkia'];
@@ -64,7 +65,7 @@ if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && isset($_GET['helbidea'
 		echo "Errorea datu basearekin, jarri harremanetan administratzailearekin";
 	}
 	include "dbkonexioak/dbClose.php";
-}
+}*/
 
 
 //dena ezarrita, botoia sakatzean aldaketak gorde, horretarako argazkiak dauzkan etiketa guztiak ezabatu 

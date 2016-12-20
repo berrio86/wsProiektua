@@ -19,6 +19,7 @@
 	
 	function kargatuDatuak(x){
 		//alert(x);
+		document.getElementById("argazkia").style.display = null;
 		konprobatuEremuak();
 		kargatuArgazkia();
 		//var select2 = document.getElementById("argazkiak").value;
@@ -34,7 +35,7 @@
 		textArea.readOnly=false;
 	}
 	
-	function kargatuArgazkia(){
+	/*function kargatuArgazkia(){
 		var select1 = document.getElementById("bildumak").value;
 		var select2 = document.getElementById("argazkiak").value;
 		xhttp.onreadystatechange = function(){
@@ -43,6 +44,16 @@
 			}	
 		};
 		xhttp.open("GET","etiketakKudeatu2.php?bilduma="+select1+"&argazkia="+select2, true);
+		xhttp.send();
+	}*/
+	function kargatuArgazkia(){
+		var helbidea = document.getElementById("argazkiak").value;
+		xhttp.onreadystatechange = function(){
+				if((xhttp.readyState==4) && (xhttp.status==200)){
+					document.getElementById("argazkia").innerHTML=xhttp.responseText;
+			}	
+		};
+		xhttp.open("GET","etiketakArgazkia.php?helbidea="+helbidea, true);
 		xhttp.send();
 	}
 	
@@ -82,7 +93,7 @@
 ?>
 
 <section class="main" id="s1">
-	<img id="argazkia" src="" style="width:150px; height: 100px; float: right;" class="argazkia"/> <br>
+	<!--<img id="argazkia" src="" style="width:150px; height: 100px; float: right; display:none;" class="argazkia"/> <br>-->
 	<div>
 		
 		<form id="argazkiakIgo" name="argazkiakIgo" method="POST" action="" enctype="multipart/form-data">
@@ -95,21 +106,24 @@
 				$eposta=$_SESSION['eposta'];
 				
 				if($mota=="Administratzailea"){
-					$galdera = "SELECT * FROM Bilduma WHERE Jabea='$eposta'";
-				}else{
 					$galdera = "SELECT * FROM Bilduma";
+				}else{
+					$galdera = "SELECT * FROM Bilduma WHERE Jabea='$eposta'";
 				}
 				$emaitza = $db->query($galdera); 
+				echo "<option disabled selected value> -- aukeratu bilduma -- </option>";
 				while ($lerroa = $emaitza->fetch_assoc()){
 					echo "<option value='{$lerroa['Izena']}'>{$lerroa['Izena']}</option>";
 				}
 				include "dbkonexioak/dbClose.php";
 			?>
 			</select></p><br/><br/>
-  			
-			<div id="bigarrenSelect"></div>
+  			<div id="argazkia" style="float:left"></div>
+			<div id="bigarrenSelect"></div><br>
+
 			
-			<textarea id="textArea" rows="4" cols="50" readonly="readonly">
+			
+			<br><br><textarea id="textArea" rows="4" cols="50" readonly="readonly">
 			</textarea><br/><br/>
 			<p>Banatu itzazu sartu nahi dituzun etiketak "," karaktereaz banatuta.</p><br/>
 			<input id="gorde" type="button" name="button" value="Gorde" disabled onclick="aldaketakGorde()">

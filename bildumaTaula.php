@@ -49,7 +49,7 @@ if($mota=="GUEST") {
 } else { //Bazkidea
 	$atzipena = "publikoa";
 	$atzipena1 = "atzipenMugatua";
-	$erabiltzaileak = "SELECT * FROM Bilduma WHERE atzipenMota='$atzipena' OR atzipenMota='$atzipena' OR Jabea='$eposta'";
+	$erabiltzaileak = "SELECT * FROM Bilduma WHERE atzipenMota='$atzipena' OR atzipenMota='$atzipena1' OR Jabea='$eposta'";
 }
 $emaitza = $db->query($erabiltzaileak); 
 echo ('<table>
