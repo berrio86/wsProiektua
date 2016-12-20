@@ -36,16 +36,26 @@ if(isset($_GET['ezabatuBilduma'])) {
 }
 
 
-if($mota=="Administratzailea"){
+/*if($mota=="Administratzailea"){
 	$erabiltzaileak = "SELECT * FROM Bilduma";
 }else{
 	$erabiltzaileak = "SELECT * FROM Bilduma WHERE Jabea='$eposta'";
+}*/
+if($mota=="GUEST") {
+	$atzipena = "publikoa";
+	$erabiltzaileak = "SELECT * FROM Bilduma WHERE atzipenMota='$atzipena'";
+} else if($mota=="Administratzailea") {
+	$erabiltzaileak = "SELECT * FROM Bilduma";
+} else { //Bazkidea
+	$atzipena = "publikoa";
+	$atzipena1 = "atzipenMugatua";
+	$erabiltzaileak = "SELECT * FROM Bilduma WHERE atzipenMota='$atzipena' OR atzipenMota='$atzipena' OR Jabea='$eposta'";
 }
-
 $emaitza = $db->query($erabiltzaileak); 
 echo ('<table>
 					<tr>
 						<th style="text-align:center"> Jabe Posta </th>
+						<th style="text-align:center"> Bilduma Mota </th>
 						<th style="text-align:center"> Bilduma Izena </th>
 						<th style="text-align:center"> Aukeratu </th>
 						<th style="text-align:center"> Ezabatu </th>	
@@ -55,12 +65,16 @@ echo ('<table>
 while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){
 	$jabea=$lerroa['Jabea'];
 	$bildumaIzena=$lerroa['Izena'];
-	$gakoNagusia=$jabea.",".$bildumaIzena;
+	//$gakoNagusia=$jabea.",".$bildumaIzena;
 	echo '<tr>';
 		echo '<td>'.$lerroa['Jabea'].'</td>';
+		echo '<td>'.$lerroa['atzipenMota'].'</td>';
 		echo '<td>'.$lerroa['Izena'].'</td>';
 		echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Aukeratu' onclick='aukeratu(\"".$jabea."\",\"".$bildumaIzena."\")'></td>");
-		echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(\"".$jabea."\",\"".$bildumaIzena."\")'></td>");
+		if($lerroa['Jabea']==$eposta || $mota=="Administratzailea")
+			echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(\"".$jabea."\",\"".$bildumaIzena."\")'></td>");
+		else
+			echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' disabled></td>");
 	echo("</tr>");
 }
 echo '</table>';

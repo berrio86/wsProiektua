@@ -12,6 +12,7 @@
 if(isset($_POST['bildumaIzena'])){
 	include 'dbkonexioak/dbOpen.php';
 	$bildumaIzena= $_POST['bildumaIzena'];
+	$atzipena= $_POST['atzipena'];
 	$eposta=$_SESSION['eposta'];
 	$emaitza = mysqli_query($db,"SELECT * FROM Bilduma WHERE Jabea='$eposta' AND Izena='$bildumaIzena'"); //ikusi ea erabiltzailea existitzen den
 	if (mysqli_num_rows($emaitza) > 0) {
@@ -25,7 +26,7 @@ if(isset($_POST['bildumaIzena'])){
 			$bilduma_helbidea = "bildumak/".$eposta."/".$bildumaIzena; //erabiltzaile argazkiei izen berri bat ezarri beren emailaren arabera
 			if(mkdir($bilduma_helbidea,0777, true)){
 				echo 'Bilduma egoki gorde da, Bildumak ikusi atalean kudeatu ahal izango duzu.</br>';
-				$txertaketa = "INSERT INTO Bilduma VALUES('$bildumaIzena','$eposta')";
+				$txertaketa = "INSERT INTO Bilduma VALUES('$bildumaIzena','$eposta','$atzipena')";
 				if($db->query($txertaketa)){
 					echo 'Datu baseko sarrera egoki egin da.';
 				}else{

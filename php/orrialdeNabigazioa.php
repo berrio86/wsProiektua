@@ -117,6 +117,10 @@
 			echo'<a href="etiketakKudeatu.php"><span id="act-sel" class="act-sel">Etiketak kudeatu<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="etiketakKudeatu.php"><span>Etiketak kudeatu</span></a>';
+		if($_GET['orrialdea']=="showUsers") //Erabiltzaileak ikusi
+			echo'<a href="ShowUsersWithImage.php"><span id="act-sel" class="act-sel">Erabiltzaileak ikusi<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="ShowUsersWithImage.php"><span>Erabiltzaileak ikusi</span></a>';
 	}
 	
 	if($_SESSION['mota'] == "Bazkidea") {
@@ -144,13 +148,17 @@
 			echo'<a href="etiketakKudeatu.php"><span id="act-sel" class="act-sel">Etiketak kudeatu<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="etiketakKudeatu.php"><span>Etiketak kudeatu</span></a>';
-	}
-	
-	if($_SESSION['mota'] != "GUEST") {
 		if($_GET['orrialdea']=="showUsers") //Erabiltzaileak ikusi
 			echo'<a href="ShowUsersWithImage.php"><span id="act-sel" class="act-sel">Erabiltzaileak ikusi<div class="arrow-right"></div></span></a>';
 		else
 			echo'<a href="ShowUsersWithImage.php"><span>Erabiltzaileak ikusi</span></a>';
+	}
+	
+	if($_SESSION['mota'] == "GUEST") {
+		if($_GET['orrialdea']=="bildumaAukeratu") //Bildumak ikusi aurrerago aukeratu eta argazkiak ezabatu ahal izateko
+			echo'<a href="bildumaAukeratu.php"><span id="act-sel" class="act-sel">Bildumak ikusi<div class="arrow-right"></div></span></a>';
+		else
+			echo'<a href="bildumaAukeratu.php"><span>Bildumak ikusi</span></a>';
 	}
 	
 	if($_GET['orrialdea']=="credits") //kredituak
