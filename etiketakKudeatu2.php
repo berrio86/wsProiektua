@@ -16,7 +16,7 @@ if(isset($_GET['bildumaAukeratua'])){
 	if($emaitza = mysqli_query($db,$argazkiak)){
 		
 		echo "<p> Aukeratu argazkia:</p><br/>";
-		echo '<select name="argazkiak" id="argazkiak" onchange="kargatuDatuak(this.value)">';
+		echo '<select name="argazkiak" id="argazkiak" onchange="kargatuDatuak()">';
 		echo "<option disabled selected value> -- aukeratu argazkia -- </option>";
 		while ($lerroa = $emaitza->fetch_assoc()){
 			$helbidea=$lerroa['Helbidea'];
@@ -70,10 +70,17 @@ if(isset($_GET['bildumaAukeratua'])){
 
 //dena ezarrita, botoia sakatzean aldaketak gorde, horretarako argazkiak dauzkan etiketa guztiak ezabatu 
 //text areako testua hartu eta "," karakterez banatu stringa. Etiketak gorde.
-if(isset($_GET['bilduma']) && isset($_GET['argazkia']) && isset($_GET['helbidea']) && isset($_GET['etiketak'])){
-	
-	echo "ondo";
-	
+if(isset($_GET['helbidea']) && isset($_GET['etiketak'])){
+	include"dbkonexioak/dbOpen.php";
+	$helbidea = $_GET['helbidea'];
+	$etiketak = serialize(explode(",",$_GET['etiketak']));
+	$sql = "UPDATE argazkia SET Etiketak='$etiketak' WHERE Helbidea='$helbidea'";
+	if($emaitza = mysqli_query($db,$sql)){
+		echo "<p>ondo</p>";
+	}else{
+		echo "gaizki";
+	}
+	include "dbkonexioak/dbClose.php";
 }
 
 

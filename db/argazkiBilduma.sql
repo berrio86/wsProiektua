@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 20-12-2016 a las 17:24:34
+-- Tiempo de generación: 21-12-2016 a las 00:08:13
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -60,7 +60,7 @@ INSERT INTO `argazkia` (`Helbidea`, `Jabea`, `BildumaIzena`, `ArgazkiIzena`, `Et
 ('bildumak/iberriochoa001@ikasle.ehu.eus/Photoshop/tigrea.jpg', 'iberriochoa001@ikasle.ehu.eus', 'Photoshop', 'tigrea.jpg', ''),
 ('bildumak/iberriochoa001@ikasle.ehu.eus/Photoshop/udazkena.jpg', 'iberriochoa001@ikasle.ehu.eus', 'Photoshop', 'udazkena.jpg', ''),
 ('bildumak/iberriochoa001@ikasle.ehu.eus/Photoshop/ura.jpg', 'iberriochoa001@ikasle.ehu.eus', 'Photoshop', 'ura.jpg', ''),
-('bildumak/jarzelus001@ikasle.ehu.eus/Albumee/user-icon.png', 'jarzelus001@ikasle.ehu.eus', 'Albumee', 'user-icon.png', ''),
+('bildumak/jarzelus001@ikasle.ehu.eus/Albumee/user-icon.png', 'jarzelus001@ikasle.ehu.eus', 'Albumee', 'user-icon.png', 0x613a373a7b693a303b733a313a2261223b693a313b733a313a2262223b693a323b733a313a2263223b693a333b733a313a2264223b693a343b733a313a2265223b693a353b733a313a2266223b693a363b733a313a2267223b7d),
 ('bildumak/jarzelus001@ikasle.ehu.eus/Albumee/wikipedia-icon.png', 'jarzelus001@ikasle.ehu.eus', 'Albumee', 'wikipedia-icon.png', '');
 
 -- --------------------------------------------------------

@@ -22,3 +22,9 @@ BITAKORA
 2016/12/16	->Iñaki		-> 2:30		-> etiketak kudeatzeko sistema garatzen jarraitu
 2016/12/16	->Iñaki		-> 1:00		-> albumaren funtzionailtatea erakusteko bi bilduma polit sortu
 						-> ezabatketa eta etiketatu frogak egiteko beste bi bilduma sortu pantailazoekin  
+2016/12/20	->Jon		-> 3:20		-> proiektuaren garbiketa orokorra
+						-> argazkiak igo hobetua
+						-> datu basean aldaketak hurrengo lanak hasteko
+						-> argazkien atzipen mota inplementatuta, albumeko
+						-> etiketak kudeatzen hasita
+						-> 23:15

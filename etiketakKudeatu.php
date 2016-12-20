@@ -17,22 +17,22 @@
 		xhttp.send();
 	}
 	
-	function kargatuDatuak(x){
+	function kargatuDatuak(){
 		//alert(x);
 		document.getElementById("argazkia").style.display = null;
 		konprobatuEremuak();
 		kargatuArgazkia();
 		//var select2 = document.getElementById("argazkiak").value;
 		//alert(select2+" argazkia aukeratu duzu");
-		kargatuEtiketak(x);
+		kargatuEtiketak();
 	}
 	
 	function konprobatuEremuak(){
 		var gorde = document.getElementById("gorde");
-		var textArea = document.getElementById("textArea");
+		//var textArea = document.getElementById("textArea");
 		//argazkia aukeratuta dagoenean botoiak eta text area abilitatu
 		gorde.disabled=false;
-		textArea.readOnly=false;
+		//textArea.readOnly=false;
 	}
 	
 	/*function kargatuArgazkia(){
@@ -57,31 +57,32 @@
 		xhttp.send();
 	}
 	
-	function kargatuEtiketak(x){
-		var select1 = document.getElementById("bildumak").value;
-		var select2 = document.getElementById("argazkiak").value;
-		var helbidea = x;
+	function kargatuEtiketak(){
+		//alert("DASDASD");
+		//var select1 = document.getElementById("bildumak").value;
+		var argazkia = document.getElementById("argazkiak").value;
+		//var helbidea = x;
 		xhttp2.onreadystatechange = function(){
 				if((xhttp2.readyState==4) && (xhttp2.status==200)){		
-					document.getElementById("textArea").value=xhttp2.responseText;
+					document.getElementById("textAreaDiv").innerHTML=xhttp2.responseText;
 			}	
 		};
-		xhttp2.open("GET","etiketakKudeatu2.php?bilduma="+select1+"&argazkia="+select2+"&helbidea="+helbidea, true);
+		xhttp2.open("GET","etiketakArea.php?helbideax="+argazkia, true);
 		xhttp2.send();
 	}
 	
 	function aldaketakGorde(){
-		var select1 = document.getElementById("bildumak").value;
-		var select2 = document.getElementById("argazkiak").value;
-		var helbidea = document.getElementById("argazkia").src.value;
+		//var select1 = document.getElementById("bildumak").value;
+		var helbidea = document.getElementById("argazkiak").value;
+		//var helbidea = document.getElementById("argazkia").src.value;
 		var etiketak = document.getElementById("textArea").value;
 		xhttp.onreadystatechange = function(){
 				if((xhttp.readyState==4) && (xhttp.status==200)){	
-					alert("onaino bai");
+					//alert("onaino bai");
 					document.getElementById("emaitza").value=xhttp.responseText;
 			}	
 		};
-		xhttp.open("GET","etiketakKudeatu2.php?bilduma="+select1+"&argazkia="+select2+"&helbidea="+helbidea+"&etiketak="+etiketak, true);
+		xhttp.open("GET","etiketakKudeatu2.php?helbidea="+helbidea+"&etiketak="+etiketak, true);
 		xhttp.send();
 	}
 	
@@ -123,9 +124,10 @@
 
 			
 			
-			<br><br><textarea id="textArea" rows="4" cols="50" readonly="readonly">
-			</textarea><br/><br/>
-			<p>Banatu itzazu sartu nahi dituzun etiketak "," karaktereaz banatuta.</p><br/>
+			<br><br>
+			<div id="textAreaDiv">
+			</div><br>
+			
 			<input id="gorde" type="button" name="button" value="Gorde" disabled onclick="aldaketakGorde()">
 			
 		 	<div id="emaitza"></div>
