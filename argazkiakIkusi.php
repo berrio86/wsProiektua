@@ -1,7 +1,9 @@
 <!DOCTYPE html>
+<?php $bildumaIzena=$_GET['bildumax']; ?>
 <html lang="en-US">
 <head>
     <meta charset="UTF-8" />
+    <?php include 'title.php' ?>
 	<link rel="icon" type="image/png" href="irudiak/question-logo.png">
     <link rel="stylesheet" type="text/css" media="all" href="./css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" media="all" href="./css/jgallery.min.css" />
@@ -26,40 +28,49 @@
 session_start();	
 if(isset($_SESSION['eposta'])){
 
-$jabea=$_SESSION['eposta'];
-	
-include 'dbkonexioak/dbOpen.php';
+	$jabea=$_GET['jabeax'];
+	$bildumaIzena=$_GET['bildumax']; //$bilduma
 
-
-$bildumaquery = "SELECT * FROM Bilduma WHERE Jabea='$jabea'";
-$bildumak = $db->query($bildumaquery); 
-	
-
-
-while ($lerroa = $bildumak->fetch_array(MYSQLI_BOTH)){
-	
-	
-	$bildumaIzena=$lerroa['Izena'];
-	//echo $bildumaIzena;
-	
-	
-	echo "<div class='album' data-jgallery-album-title='$bildumaIzena'>";
-	echo '<h1>'.$bildumaIzena.'</h1>';
-	
-	$argazkiaquery = "SELECT * FROM Argazkia WHERE Jabea='$jabea' AND BildumaIzena='$bildumaIzena'";
-	$argazkiak = $db->query($argazkiaquery); 
-	while ($lerroa2 = $argazkiak->fetch_array(MYSQLI_BOTH)){
-		$helbidea=$lerroa2['Helbidea'];
-		echo"<a href='$helbidea'><img src='$helbidea' alt='Jon Arzelus eta Iñaki Berriotxoa'  data-jgallery-bg-color='#3e3e3e' data-jgallery-text-color='#fff' /></a>";	
+		
+	include 'dbkonexioak/dbOpen.php';
+/*
+	if($_SESSION['mota']=="Administratzailea") {
+		$bildumaquery = "SELECT * FROM Bilduma";
+	} else {
+		$bildumaquery = "SELECT * FROM Bilduma WHERE Jabea='$jabea' AND Izena='$bilduma'";
 	}
-	
-	echo'</div>';
-	
-}
+
+	$bildumak = $db->query($bildumaquery); 
+		
 
 
-include 'dbkonexioak/dbClose.php';
-}
+	while ($lerroa = $bildumak->fetch_array(MYSQLI_BOTH)){
+		
+		
+		$bildumaIzena=$lerroa['Izena'];
+		//echo $bildumaIzena;
+		
+		*/
+		echo "<div class='album' data-jgallery-album-title='$bildumaIzena'>";
+		echo '<h1>'.$bildumaIzena.'</h1>';
+		//if($_SESSION['mota']=="Administratzailea") {
+		//	$argazkiaquery = "SELECT * FROM Argazkia WHERE BildumaIzena='$bildumaIzena'";
+		//} else {
+			$argazkiaquery = "SELECT * FROM Argazkia WHERE Jabea='$jabea' AND BildumaIzena='$bildumaIzena'";
+		//}	
+		$argazkiak = $db->query($argazkiaquery); 
+		while ($lerroa2 = $argazkiak->fetch_array(MYSQLI_BOTH)){
+			$helbidea=$lerroa2['Helbidea'];
+			echo"<a href='$helbidea'><img src='$helbidea' alt='Jon Arzelus eta Iñaki Berriotxoa'  data-jgallery-bg-color='#3e3e3e' data-jgallery-text-color='#fff' /></a>";	
+		}
+		
+		echo'</div>';
+		
+	}
+
+
+	include 'dbkonexioak/dbClose.php';
+//}
 ?>					
 			  
            </div>

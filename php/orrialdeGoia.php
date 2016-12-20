@@ -8,14 +8,15 @@
 		$_SESSION['eposta'] = "Erabiltzaile Anonimoa";
 		$_SESSION['mota'] = "GUEST";
 	}
-	if($_GET['orrialdea'] == "ikasleakIkusi" && $_SESSION['mota'] != "IRAKASLEA") { //irakasleek soilik dute sarrera honera
-		header("Location:index.php");
+	if($_SESSION['mota']=="GUEST") { //irakasleek soilik dute sarrera honera
+		if($_GET['orrialdea']=="enroll" || $_GET['orrialdea']=="argazkiakIgo" || $_GET['orrialdea']=="argazkiakKudeatu" || $_GET['orrialdea']=="bildumaAukeratu" || $_GET['orrialdea']=="eskaerakKudeatu" || $_GET['orrialdea']=="etiketakKudeatu" || $_GET['orrialdea']=="showUsers" || $_GET['orrialdea']=="albumaSortu" || $_GET['orrialdea']=="argazkiakIgo") {
+			header("Location:index.php");
+		}
 	}
-	if($_GET['orrialdea'] == "reviewingQuizes" && $_SESSION['mota'] != "IRAKASLEA") { //irakasleek soilik dute sarrera honera
-		header("Location:index.php");
-	}
-	if($_GET['orrialdea']=="handlingQuizes" && $_SESSION['mota'] == "GUEST") { //erregistratuak soilik dute sarrera honera
-		header("Location:index.php");
+	if($_SESSION['mota']=="Bazkidea") { //irakasleek soilik dute sarrera honera
+		if($_GET['orrialdea']=="eskaerakKudeatu") {
+			header("Location:index.php");
+		}
 	}
 
 ?>

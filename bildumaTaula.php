@@ -61,8 +61,8 @@ while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){
 	echo '<tr>';
 		echo '<td>'.$lerroa['Jabea'].'</td>';
 		echo '<td>'.$lerroa['Izena'].'</td>';
-		echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Aukeratu' onclick='aukeratu(\"".$gakoNagusia."\")'></td>");
-		echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(\"".$gakoNagusia."\")'></td>");
+		echo ("<td style='text-align:center'><input type='button' style='width:100%;' value='Aukeratu' onclick='aukeratu(\"".$jabea."\",\"".$bildumaIzena."\")'></td>");
+		echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(\"".$jabea."\",\"".$bildumaIzena."\")'></td>");
 	echo("</tr>");
 }
 echo '</table>';
