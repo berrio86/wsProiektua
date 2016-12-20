@@ -6,7 +6,7 @@
 
 	var xhttp = new XMLHttpRequest();
 	
-	/*function ezabatu(jabea, bilduma){
+	function ezabatu(jabea, bilduma){
 		if(confirm("Ziur al zaude bilduma ezabatu nahi duzula?")){
 			xhttp.onreadystatechange = function(){
 				if((xhttp.readyState==4) && (xhttp.status==200)){		
@@ -18,7 +18,7 @@
 		}else{
 			alert("Bilduma ez da ezabatuko.");
 		}
-	}*/
+	}
 	
 	function aukeratu(jabea, bilduma){
 		window.open("argazkiakIkusi.php?jabeax="+jabea+"&bildumax="+bilduma);

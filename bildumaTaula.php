@@ -7,10 +7,8 @@ $eposta=$_SESSION['eposta'];
 $mota=$_SESSION['mota'];
 
 if(isset($_GET['ezabatuBilduma'])) {
-	$stringa = $_GET['ezabatuBilduma'];
-	$array=explode(",",$stringa);
-	$jabea=$array[0];
-	$bilduma=$array[1];
+	$jabea=$_GET['jabeax'];
+	$bilduma=$_GET['ezabatuBilduma'];
 	//datu basetik ezabatu
 	$ezabatuArgazkiak = "DELETE FROM Argazkia WHERE Jabea='$jabea' AND BildumaIzena='$bilduma'";
 	$db->query($ezabatuArgazkiak); 

@@ -14,10 +14,15 @@
 			tamainaAldatu();
 		}
 		
-		if (file){
+		if (file) {
 			reader.readAsDataURL(file);
 			var botoia = document.getElementById("botoia");
-			botoia.disabled=false;
+			var sel = document.getElementById("bildumak");
+			if(sel.value.length == 0) {
+				alert("ez dituzu bildumarik, lehenik sortu bilduma bat eta gero igo argazkiak");
+			} else {
+				botoia.disabled=false;
+			}
 		}else{
 			preview.src="";
 		}
@@ -44,7 +49,7 @@
 		<form id="argazkiakIgo" name="argazkiakIgo" method="POST" action="argazkiakGorde.php" enctype="multipart/form-data">
 		 	<h2>Argazkiak igotzeko interfazea</h2><br/>
   			<p> Aukeratu bilduma:</p><br/>
-			<p><select name="bilduma">
+			<p><select name="bilduma" id="bildumak">
 			<?php
 				//option motako elementuetan erabiltzaileak sartu
 				include"dbkonexioak/dbOpen.php";
