@@ -13,9 +13,9 @@ if ($host=="localhost"){
 }else{
 	//hostingerren atzitzeko
 	define("HOST","mysql.hostinger.es");
-	define("USER", "u880556081_user");
+	define("USER", "u880556081_a");
 	define("PASS", "123456");
-	define("DATABASE", "u880556081_argaz");
+	define("DATABASE", "u880556081_a");
 	//define("ESTEKA","http://berriogit.hol.es/ShowUsersWithImage.php");
 	//define("HASIERA","http://berriogit.hol.es/layout.php");
 	//define("SIGNUP","http://berriogit.hol.es/signUp.php");

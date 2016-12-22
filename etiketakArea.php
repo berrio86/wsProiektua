@@ -6,7 +6,7 @@ include"dbkonexioak/dbOpen.php";
 if(isset($_GET['helbideax'])) {
 	echo "<p>Banatu itzazu sartu nahi dituzun etiketak "," karaktereaz banatuta.</p><br>";
 	$helbidea = $_GET['helbideax'];
-	$etiketak = "SELECT Etiketak FROM argazkia WHERE Helbidea='$helbidea'";
+	$etiketak = "SELECT Etiketak FROM Argazkia WHERE Helbidea='$helbidea'";
 	if($emaitza = mysqli_query($db,$etiketak)){
 		$lerroa = $emaitza->fetch_assoc();	
 		echo "<textarea id='textArea' rows='4' cols='50'>";
