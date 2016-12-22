@@ -21,6 +21,21 @@
 		}
 	}
 
+	function etikete(){
+		var x = document.getElementById("etiketaInput").value;
+		if(confirm(x+" etiketa duten argazkiak agertuko dira soilik")){
+			xhttp.onreadystatechange = function(){
+				if((xhttp.readyState==4) && (xhttp.status==200)){		
+					document.getElementById("taula").innerHTML=xhttp.responseText;
+			}	
+		};
+		xhttp.open("GET","argazkiaTaula.php?etiketaInput="+x, true);
+		xhttp.send();
+		}else{
+			alert("Ezin izan da atzipena egin.");
+		}
+	}
+
 
 </script>
 
@@ -36,6 +51,9 @@
 <?php 
 include 'argazkiaTaula.php';
 ?>
+<h5>Aukeratu etiketa zehatza duten argazkiak soilik: </h5>
+<input type="text" id="etiketaInput" name="etiketaInput" placeholder="etiketa bakarra sartu" title="etiketa bakarra sartu" required pattern="([A-Z]{0,}[a-z ]{0,})*">
+<input id="botoia" type="button" name="button" value="Aukeratu" onclick="etikete();">
 </div>
 </section>
 

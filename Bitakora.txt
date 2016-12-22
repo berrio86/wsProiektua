@@ -28,3 +28,5 @@ BITAKORA
 						-> argazkien atzipen mota inplementatuta, albumeko
 						-> etiketak kudeatzen hasita
 						-> 1:05		-> etiketen kudeaketa amaituta (etiketak sortu/ikusi/editatu)
+2016/12/22				-> 3:35		-> Hostingerreko azken aldaketak (dena aldatu)
+						-> 1:30		-> informea eta galdetegia

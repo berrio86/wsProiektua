@@ -34,19 +34,32 @@ echo ('<table>
 					<tr>
 						<th style="text-align:center"> Bilduma Izena </th>
 						<th style="text-align:center"> Argazki Izena </th>
+						<th style="text-align:center"> Etiketak </th>
 						<th style="text-align:center"> Argazkia </th>
 						<th style="text-align:center"> Ezabatu </th>	
 						
 					</tr> ');
 
 while ($lerroa = $emaitza->fetch_array(MYSQLI_BOTH)){
-	$gakoNagusia=$lerroa['Helbidea'];
-	echo '<tr>';
-		echo '<td>'.$lerroa['BildumaIzena'].'</td>';
-		echo '<td>'.$lerroa['ArgazkiIzena'].'</td>';
-		echo '<td style="text-align: center;">'.'<img alt="Errorea argazkia atzitzean" src="'.$lerroa['Helbidea'].'" width="80" height="80">'.'</td>';
-		echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(\"".$gakoNagusia."\")'></td>");
-	echo("</tr>");
+	$arg = unserialize($lerroa['Etiketak']);
+	if(!$arg)
+		$arg = Array("");
+	if((isset($_GET['etiketaInput']) && in_array($_GET['etiketaInput'],$arg)) || (!isset($_GET['etiketaInput']))) {
+		//$gakoNagusia=$lerroa['Helbidea'];
+		echo '<tr>';
+			echo '<td>'.$lerroa['BildumaIzena'].'</td>';
+			echo '<td>'.$lerroa['ArgazkiIzena'].'</td>';
+			if($lerroa['Etiketak']!=null)
+				$arraia = implode(',',unserialize($lerroa['Etiketak']));
+			else
+				$arraia = "";
+			echo '<td>';
+			print $arraia;
+			echo '</td>';
+			echo '<td style="text-align: center;">'.'<img alt="Errorea argazkia atzitzean" src="'.$lerroa['Helbidea'].'" width="80" height="80">'.'</td>';
+			echo ("<td style='text-align:center'><input name='onartu' type='button' style='width:100%;' value='Ezabatu' onclick='ezabatu(\"".$lerroa['Helbidea']."\")'></td>");
+		echo("</tr>");
+	}
 }
 echo '</table>';
 include 'dbkonexioak/dbClose.php';
