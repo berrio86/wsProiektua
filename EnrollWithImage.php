@@ -66,7 +66,7 @@
 					echo'Zure eskaria egoki burutu da.</br>'; 
 					echo'Administratzaileak ahalik eta azkarren onartu edo ukatuko du zure eskaria.</br>';
 				}else{
-					echo 'Akatsen bat egon da zure eskaera prozesuan.</br>':
+					echo 'Akatsen bat egon da zure eskaera prozesuan.</br>';
 					echo 'Mesedez, jar zaitzez administratzailearekin harremanetan.</br>';
 				}
 				
